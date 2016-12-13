@@ -5,6 +5,6 @@ total=0
 for (( i=0; i<${#theArray[*]}; i++ )); do
         total=$((total+${theArray[i]}));
 done
-avg=$((total / ${#theArray[*]}))
-echo $avg
+echo "$total / ${#theArray[*]}" | bc -l
+
 
